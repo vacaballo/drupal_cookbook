@@ -7,7 +7,7 @@ define :drush, :drush_bin => '/usr/local/bin' do
   version_parts = drush_version.split('-').pop.split('.')
   version_parts += [0] * (3 - version_parts.size) if version_parts.size < 3
   drush_version = version_parts.join('.')
-  drush_uri     = 'https://github.com/drush-ops/drush/archive'
+  drush_uri     = 'https://codeload.github.com/drush-ops/drush'
   include_recipe 'ark'
   ark 'drush' do
     action :install
